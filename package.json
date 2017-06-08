@@ -20,6 +20,7 @@
     "url": "git@github.com:nodeps/nodeps.git"
   },
   "dependencies": {
-    "psd": "~ 3.1.0"
+    "psd": "~ 3.1.0",
+    "anywhere": "~ 1.4.0"
   }
 }
