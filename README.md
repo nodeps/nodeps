@@ -17,10 +17,8 @@ $ npm install
 Replace node.psd with your file.
 
 ```sh
-// PSD parser to HTMl
+// PSD parser to HTMl and open in browser
 $ npm start
-// view the html file
-$ npm test
 
 ```
 
