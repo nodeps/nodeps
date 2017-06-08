@@ -1,5 +1,6 @@
 var fs         = require('fs')
 var PSD        = require('psd')
+var open       = require("open")
 var psd        = PSD.fromFile("node.psd")
 var PNG_FOLDER = 'www/images/'
 var jsonFile   = 'www/js/psd.js'
@@ -25,9 +26,9 @@ PSD.open("node.psd").then(function (psd) {
 }).then(function () {
   fs.writeFile(jsonFile, 'var psdJSON =' + JSON.stringify(imgs, null, 4), function(err) {
       if(err) {
-        console.log(err);
+        console.log(err)
       } else {
-        console.log(imgs);
+        open("index.html")
       }
   })
 })

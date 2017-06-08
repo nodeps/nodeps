@@ -3,9 +3,7 @@
   "description": "A general purpose Photoshop file parser to HTMl file.",
   "version": "0.0.1",
   "scripts": {
-    "start": "node index.js",
-    "test": "anywhere",
-    "preinstall": "npm install anywhere -g"
+    "start": "node index.js"
   },
   "main": "./index.js",
   "keywords": [
@@ -21,6 +19,6 @@
   },
   "dependencies": {
     "psd": "~ 3.1.0",
-    "anywhere": "~ 1.4.0"
+    "open": "0.0.5"
   }
 }
