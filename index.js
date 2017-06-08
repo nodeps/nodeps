@@ -1,11 +1,11 @@
 var fs         = require('fs')
 var PSD        = require('psd')
-var psd        = PSD.fromFile("h5.psd")
+var psd        = PSD.fromFile("node.psd")
 var PNG_FOLDER = 'www/images/'
 var jsonFile   = 'www/js/psd.json'
 var imgs       = []
 psd.parse()
-PSD.open("h5.psd").then(function (psd) {
+PSD.open("node.psd").then(function (psd) {
   psd.tree().descendants().reverse().forEach(function (node,i) {
     if (!node.isGroup() && node.export().visible){
         var item = {}  

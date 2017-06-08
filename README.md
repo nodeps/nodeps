@@ -14,14 +14,13 @@ npm install
 
 ## Execution
 
-Copy a psd file to the root directory.
-Example: h5.psd
+Replace node.psd with your file.
 
 ```sh
 // PSD parser to HTMl
 $ npm start
 // view the html file
-$ anywhere
+$ npm test
 
 ```
 

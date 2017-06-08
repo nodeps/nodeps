@@ -1,23 +1,30 @@
 [
     {
-        "width": 667,
-        "height": 651,
-        "left": -186,
-        "top": -189,
+        "width": 300,
+        "height": 225,
+        "left": 0,
+        "top": 0,
         "index": 0
     },
     {
-        "width": 69,
-        "height": 190,
-        "left": 88,
-        "top": 20,
+        "width": 300,
+        "height": 225,
+        "left": 0,
+        "top": 0,
         "index": 1
     },
     {
         "width": 199,
         "height": 215,
-        "left": 42,
+        "left": 22,
         "top": 10,
         "index": 2
+    },
+    {
+        "width": 231,
+        "height": 41,
+        "left": 34,
+        "top": 97,
+        "index": 3
     }
 ]
