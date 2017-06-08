@@ -7,9 +7,9 @@ A general purpose Photoshop file parser to HTMl file.
 clone the repository and install the dependencies.
 
 ```sh
-git@github.com:nodeps/nodeps.git
-cd nodeps
-npm install 
+$ git clone git@github.com:nodeps/nodeps.git
+$ cd nodeps
+$ npm install 
 ```
 
 ## Execution
