@@ -4,7 +4,7 @@ A general purpose Photoshop file parser to HTMl file.
 
 ## Installation
 
-Install it as a command line tool via `npm -g`.
+clone the repository and install the dependencies.
 
 ```sh
 git@github.com:nodeps/nodeps.git
@@ -14,7 +14,7 @@ npm install
 
 ## Execution
 
-Copy a psd file to the root directory
+Copy a psd file to the root directory.
 Example: h5.psd
 
 ```sh
