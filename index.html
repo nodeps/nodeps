@@ -10,9 +10,9 @@
 </head>
 <body>
 <div id="image"></div>
-<script type="text/javascript" src = "lib/jquery.js"></script>
+<script type="text/javascript" src = "www/lib/jquery.js"></script>
 <script>
-  $.getJSON("http://192.168.31.197:8000/js/psd.json", function(data){
+  $.getJSON("http://192.168.31.197:8000/www/js/psd.json", function(data){
     $.each(data, function(i,item){
       var data ={
           width:0,
@@ -28,7 +28,7 @@
       var top = item.top + 'px'
       var style = `width:${width};height:${height};left:${left};top:${top};`
       var img = `
-        <img style='${style}' src='images/${i}.png'>
+        <img style='${style}' src='www/images/${i}.png'>
       `
       $('#image').append(img);
     });
