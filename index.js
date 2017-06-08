@@ -2,7 +2,7 @@ var fs         = require('fs')
 var PSD        = require('psd')
 var psd        = PSD.fromFile("node.psd")
 var PNG_FOLDER = 'www/images/'
-var jsonFile   = 'www/js/psd.json'
+var jsonFile   = 'www/js/psd.js'
 var imgs       = []
 psd.parse()
 PSD.open("node.psd").then(function (psd) {
@@ -23,7 +23,7 @@ PSD.open("node.psd").then(function (psd) {
     node.saveAsPng(PNG_FOLDER + i + ".png")
   })
 }).then(function () {
-  fs.writeFile(jsonFile, JSON.stringify(imgs, null, 4), function(err) {
+  fs.writeFile(jsonFile, 'var psdJSON =' + JSON.stringify(imgs, null, 4), function(err) {
       if(err) {
         console.log(err);
       } else {

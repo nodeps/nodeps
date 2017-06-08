@@ -3,36 +3,35 @@
 <head>
 <title>psd to html</title>
 <style type="text/css">
-  body, html {padding: 0; margin: 0;}
-  #image {position: relative; width: 750px;  margin: 0 auto;}
-  #image  img{position: absolute}
+  body, html {padding:0; margin:0;}
+  #image {position:relative; width:750px;  margin:0 auto;}
+  #image  img{position: absolute;}
 </style>
 </head>
 <body>
 <div id="image"></div>
 <script type="text/javascript" src = "www/lib/jquery.js"></script>
+<script type="text/javascript" src = "www/js/psd.js"></script>
 <script>
-  $.getJSON("http://192.168.31.197:8000/www/js/psd.json", function(data){
-    $.each(data, function(i,item){
-      var data ={
-          width:0,
-          height:0,
-          left :0,
-          top : 0,
-          index:i
-      }
-      item = item || data
-      var width = item.width + 'px'
-      var height = item.height + 'px'
-      var left = item.left + 'px'
-      var top = item.top + 'px'
-      var style = `width:${width};height:${height};left:${left};top:${top};`
-      var img = `
-        <img style='${style}' src='www/images/${i}.png'>
-      `
-      $('#image').append(img);
-    });
-  });
+  $.each(psdJSON, function(i,item){
+    var data ={
+        width:  0,
+        height: 0,
+        left :  0,
+        top :   0,
+        index:  i
+    }
+    item = item || data
+    var width = item.width + 'px'
+    var height = item.height + 'px'
+    var left = item.left + 'px'
+    var top = item.top + 'px'
+    var style = `width:${width};height:${height};left:${left};top:${top};`
+    var img = `
+      <img style='${style}' src='www/images/${i}.png'>
+    `
+    $('#image').append(img)
+  })
 </script
 </body>
 </html>
