@@ -1,0 +1,25 @@
+{
+  "name": "nodeps",
+  "description": "A general purpose Photoshop file parser to HTMl file.",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node index.js",
+    "test": "anywhere",
+    "preinstall": "npm install anywhere -g"
+  },
+  "main": "./index.js",
+  "keywords": [
+    "psd",
+    "parser",
+    "photoshop",
+    "adobe",
+    "psd to html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nodeps/nodeps.git"
+  },
+  "dependencies": {
+    "psd": "~ 3.1.0"
+  }
+}

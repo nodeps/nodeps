@@ -1,0 +1,33 @@
+var fs         = require('fs')
+var PSD        = require('psd')
+var psd        = PSD.fromFile("h5.psd")
+var PNG_FOLDER = 'www/images/'
+var jsonFile   = 'www/js/psd.json'
+var imgs       = []
+psd.parse()
+PSD.open("h5.psd").then(function (psd) {
+  psd.tree().descendants().reverse().forEach(function (node,i) {
+    if (!node.isGroup() && node.export().visible){
+        var item = {}  
+        var imgStruct=[]   
+        imgStruct[i] = node.export()
+        item={
+          width  : imgStruct[i].width,
+          height : imgStruct[i].height,
+          left   : imgStruct[i].left,
+          top    : imgStruct[i].top,
+          index  : i
+        }
+        imgs[i]=item
+    }
+    node.saveAsPng(PNG_FOLDER + i + ".png")
+  })
+}).then(function () {
+  fs.writeFile(jsonFile, JSON.stringify(imgs, null, 4), function(err) {
+      if(err) {
+        console.log(err);
+      } else {
+        console.log(imgs);
+      }
+  })
+})
