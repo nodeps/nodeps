@@ -51,7 +51,7 @@
     "url": "git+ssh://git@github.com/nodeps/nodeps.git"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js node.psd"
   },
-  "version": "0.0.7"
+  "version": "0.0.8"
 }

@@ -8,7 +8,7 @@ var imgs       = []
 
 var psdFile    = process.argv.slice(2)[0]
 var psd        = PSD.fromFile(psdFile)
-console.log(psdFile)
+console.log('psdFile',psdFile)
 psd.parse()
 PSD.open(psdFile).then(function (psd) {
   psd.tree().descendants().reverse().forEach(function (node,i) {
@@ -29,9 +29,11 @@ PSD.open(psdFile).then(function (psd) {
   })
 }).then(function () {
   fs.writeFile(jsonFile, 'var psdJSON =' + JSON.stringify(imgs, null, 4), function(err) {
+    
       if(err) {
         console.log(err)
       } else {
+        console.log(imgs)
         open(__dirname+ "/www/index.html")
       }
   })
