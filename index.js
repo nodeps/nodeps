@@ -1,12 +1,16 @@
 var fs         = require('fs')
 var PSD        = require('psd')
 var open       = require("open")
-var psd        = PSD.fromFile("node.psd")
-var PNG_FOLDER = 'www/images/'
-var jsonFile   = 'www/js/psd.js'
+
+var PNG_FOLDER = __dirname + '/www/images/'
+var jsonFile   = __dirname+ '/www/js/psd.js'
 var imgs       = []
+
+var psdFile    = process.argv.slice(2)[0]
+var psd        = PSD.fromFile(psdFile)
+console.log(psdFile)
 psd.parse()
-PSD.open("node.psd").then(function (psd) {
+PSD.open(psdFile).then(function (psd) {
   psd.tree().descendants().reverse().forEach(function (node,i) {
     if (!node.isGroup() && node.export().visible){
         var item = {}  
@@ -28,7 +32,7 @@ PSD.open("node.psd").then(function (psd) {
       if(err) {
         console.log(err)
       } else {
-        open("index.html")
+        open(__dirname+ "/www/index.html")
       }
   })
 })

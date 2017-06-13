@@ -4,21 +4,17 @@ A general purpose Photoshop file parser to HTMl file.
 
 ## Installation
 
-clone the repository and install the dependencies.
-
 ```sh
-$ git clone git@github.com:nodeps/nodeps.git
-$ cd nodeps
-$ npm install 
+$ npm install nodeps -g
 ```
 
 ## Execution
 
-Replace node.psd with your file.
+Go to the psd file directory and enter the following command at the command line.
 
 ```sh
 // PSD parser to HTMl and open in browser
-$ npm start
+$ nodeps yourfile.psd
 
 ```
 

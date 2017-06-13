@@ -1,11 +1,42 @@
 {
-  "name": "nodeps",
-  "description": "A general purpose Photoshop file parser to HTMl file.",
-  "version": "0.0.1",
-  "scripts": {
-    "start": "node index.js"
+  "_from": "nodeps",
+  "_id": "nodeps@0.0.7",
+  "_inBundle": false,
+  "_integrity": "sha512-u0QD+BAi9ZSc/zHalUaOcaP+hTp1Ztt82ftwKP+UQcmhioxNtJE/8ah4v738YSSXeO/FhnaCRlMtf9CoziR4sA==",
+  "_location": "/nodeps",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "nodeps",
+    "name": "nodeps",
+    "escapedName": "nodeps",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "main": "./index.js",
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/nodeps/-/nodeps-0.0.7.tgz",
+  "_shasum": "fec10fd423907b1d755219e94ce6e86c576ff953",
+  "_spec": "nodeps",
+  "_where": "/Users/bruce.wang",
+  "bin": {
+    "nodeps": "./bin/nodeps.js"
+  },
+  "bugs": {
+    "url": "https://github.com/nodeps/nodeps/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "commander": "2.9.0",
+    "open": "0.0.5",
+    "psd": "~ 3.1.0"
+  },
+  "deprecated": false,
+  "description": "A general purpose Photoshop file parser to HTMl file.",
+  "homepage": "https://github.com/nodeps/nodeps#readme",
   "keywords": [
     "psd",
     "parser",
@@ -13,12 +44,14 @@
     "adobe",
     "psd to html"
   ],
+  "main": "./index.js",
+  "name": "nodeps",
   "repository": {
     "type": "git",
-    "url": "git@github.com:nodeps/nodeps.git"
+    "url": "git+ssh://git@github.com/nodeps/nodeps.git"
   },
-  "dependencies": {
-    "psd": "~ 3.1.0",
-    "open": "0.0.5"
-  }
+  "scripts": {
+    "start": "node index.js"
+  },
+  "version": "0.0.7"
 }
