@@ -11,8 +11,13 @@ var psd        = PSD.fromFile(psdFile)
 console.log('psdFile',psdFile)
 psd.parse()
 PSD.open(psdFile).then(function (psd) {
+  // console.log(psd.tree().descendants())
+  // console.log(psd.tree().export())
+ 
   psd.tree().descendants().reverse().forEach(function (node,i) {
-    if (!node.isGroup() && node.export().visible){
+    if (!node.isGroup() && node.export().visible ){
+        // console.log(node)
+        // console.log(i,node.export())
         var item = {}  
         var imgStruct=[]   
         imgStruct[i] = node.export()
@@ -33,7 +38,7 @@ PSD.open(psdFile).then(function (psd) {
       if(err) {
         console.log(err)
       } else {
-        console.log(imgs)
+        // console.log(imgs)
         open(__dirname+ "/www/index.html")
       }
   })
