@@ -1,5 +1,5 @@
 #!/bin/bash
-node_version="8.9.3"
+node_version="6.9.5"
 # 下载node包
 wget https://nodejs.org/dist/v${node_version}/node-v${node_version}-linux-x64.tar.xz
   
