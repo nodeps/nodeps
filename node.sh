@@ -7,18 +7,15 @@ wget https://nodejs.org/dist/v${node_version}/node-v${node_version}-linux-x64.ta
 # 解压二进制源码
 xz -d node-v${node_version}-linux-x64.tar.xz
 tar xvf node-v${node_version}-linux-x64.tar
-vim /etc/profile
+
 #在export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL下面添加路径，:wq保存退出。
 #set for nodejs
-export NODE_HOME=/root/node-v${node_version}-linux-x64
-export PATH=$NODE_HOME/bin:$PATH
 
-echo 'export NODE_HOME=/root/node-v'${node_version}'-linux-x64'>>/etc/profile
+echo 'export NODE_HOME=/root/node-v'${node_version}'-linux-x64'>>/etc/profile 
 echo 'export PATH=$NODE_HOME/bin:$PATH'>>/etc/profile
 source /etc/profile
 
 
 #sh -c "$(curl -fsSL http://gitlab.tools.vipshop.com/bruce01.wang/node-install-linux/blob/master/node.sh)"
 #sh -c "$(curl -fsSL http://192.168.31.202:8000/node.sh)"
-
-exit 0
+#sh -c "$(curl -fsSL https://raw.githubusercontent.com/nodeps/nodeps/master/node.sh)"
