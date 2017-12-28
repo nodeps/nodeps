@@ -20,3 +20,5 @@ source /etc/profile
 
 #sh -c "$(curl -fsSL http://gitlab.tools.vipshop.com/bruce01.wang/node-install-linux/blob/master/node.sh)"
 #sh -c "$(curl -fsSL http://192.168.31.202:8000/node.sh)"
+
+exit 0
