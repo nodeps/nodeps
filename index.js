@@ -6,14 +6,17 @@ var PNG_FOLDER = __dirname + '/www/images/'
 var jsonFile   = __dirname+ '/www/js/psd.js'
 var imgs       = []
 
-var psdFile    = process.argv.slice(2)[0]
+var psdFile    = process.argv.slice(2)[0] || 'node.psd'
 var psd        = PSD.fromFile(psdFile)
-console.log('psdFile',psdFile)
+// console.log('psdFile',psdFile)
 psd.parse()
 PSD.open(psdFile).then(function (psd) {
   // console.log(psd.tree().descendants())
-  // console.log(psd.tree().export())
- 
+  var psdTree = psd.tree().descendants().reverse()
+  let contractors = psdTree.filter( function(val){
+    return !val.isGroup() && val.export().visible
+  })
+  console.log(contractors.length)
   psd.tree().descendants().reverse().forEach(function (node,i) {
     if (!node.isGroup() && node.export().visible ){
         // console.log(node)
@@ -39,7 +42,7 @@ PSD.open(psdFile).then(function (psd) {
         console.log(err)
       } else {
         // console.log(imgs)
-        open(__dirname+ "/www/index.html")
+        // open(__dirname+ "/www/index.html")
       }
   })
 })
